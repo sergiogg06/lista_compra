@@ -6,6 +6,12 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+.pendiente {
+    color: red;
+}
+.comprado {
+    color: green;
+}
 li {
     background: #f4f4f4;
     margin: 5px 0;
@@ -13,10 +19,24 @@ li {
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Asegura que los elementos se distribuyan de manera correcta */
 }
-.pendiente {
-    color: red;
+
+li span {
+    margin-right: auto; /* Alinea el texto a la izquierda */
 }
-.comprado {
-    color: green;
+
+.eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 10px;
 }
+
+.eliminar:hover {
+    background-color: darkred;
+}
+
