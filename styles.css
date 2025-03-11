@@ -1,42 +1,136 @@
+/* Estilo general del cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
 }
+
+/* Estilo del contenedor principal */
+.container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Botones en la parte superior (Añadir y Borrar) */
+#agregar, #borrar-todo {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 48%; /* Los botones ocupan el 48% del ancho para ir uno al lado del otro */
+    display: inline-block;
+}
+
+#agregar:hover, #borrar-todo:hover {
+    background-color: #007bb5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#agregar:active, #borrar-todo:active {
+    transform: scale(0.98);
+}
+
+/* Estilo de la lista */
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
 }
-.pendiente {
-    color: red;
-}
-.comprado {
-    color: green;
-}
+
+/* Estilo para cada elemento de la lista */
 li {
-    background: #f4f4f4;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; /* Asegura que los elementos se distribuyan de manera correcta */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-li span {
-    margin-right: auto; /* Alinea el texto a la izquierda */
+li:hover {
+    transform: translateY(-5px); /* Efecto al pasar el ratón sobre el item */
 }
 
-.eliminar {
-    background-color: red;
+/* Estilo para el texto pendiente */
+.pendiente {
+    color: #d9534f;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+/* Estilo para el texto comprado */
+.comprado {
+    color: #5bc0de;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+/* Estilo para los botones dentro de la lista */
+button {
+    background-color: #4caf50;
     color: white;
     border: none;
-    border-radius: 3px;
-    padding: 5px;
+    border-radius: 25px;
+    padding: 10px 20px;
     cursor: pointer;
-    margin-left: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Estilo para el botón de eliminar */
+.eliminar {
+    background-color: #e74c3c;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .eliminar:hover {
-    background-color: darkred;
+    background-color: #c0392b;
 }
+
+.eliminar:active {
+    transform: scale(0.9);
+}
+
 
